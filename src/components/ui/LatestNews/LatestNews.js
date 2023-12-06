@@ -10,6 +10,8 @@ import {
   
   import topNews from "@/assets/Rectangle 8 (1).png";
   import topNews2 from "@/assets/Rectangle 9.png";
+  import topNews3 from "@/assets/Rectangle 12.png";
+  import topNews4 from "@/assets/Rectangle 13.png";
   import Image from "next/image";
 
   
@@ -139,7 +141,7 @@ import {
                 <CardActionArea>
                   <CardMedia>
                     <Image
-                      src={topNews2}
+                      src={topNews3}
                       width={800}
                       height={300}
                       alt="top news"
@@ -177,7 +179,7 @@ import {
                 <CardActionArea>
                   <CardMedia>
                     <Image
-                      src={topNews2}
+                      src={topNews4}
                       width={800}
                       height={300}
                       alt="top news"
