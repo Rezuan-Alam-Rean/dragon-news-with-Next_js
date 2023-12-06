@@ -14,6 +14,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { IconButton, Stack } from "@mui/material";
 import Link from "next/link";
+import Header from "./Header";
 
 
 
@@ -50,7 +51,10 @@ function Navbar() {
   
 
   return (
-    <AppBar position="static" className="bg-black" >
+    <>
+        <Header/>
+
+        <AppBar position="static" className="bg-black" >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
             <Image width={100} height={100} src={logo} alt="logo" />
@@ -93,6 +97,7 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </>
   );
 }
 export default Navbar;
