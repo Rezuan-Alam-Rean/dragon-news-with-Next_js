@@ -16,60 +16,49 @@ import { IconButton, Stack } from "@mui/material";
 import Link from "next/link";
 import Header from "./Header";
 
-
-
 const navItems = [
-    {
-      route: "Home",
-      pathname: "/",
-    },
-    {
-      route: "Pages",
-      pathname: "/pages",
-    },
-    {
-      route: "Category",
-      pathname: "/categories/news?category=all-news",
-    },
-    {
-      route: "News",
-      pathname: "/news",
-    },
-    {
-      route: "About",
-      pathname: "/about",
-    },
-    {
-      route: "Contact",
-      pathname: "/contact",
-    },
-  ];
-
+  {
+    route: "Home",
+    pathname: "/",
+  },
+  {
+    route: "Pages",
+    pathname: "/pages",
+  },
+  {
+    route: "Category",
+    pathname: "/categories/news?category=all-news",
+  },
+  {
+    route: "News",
+    pathname: "/news",
+  },
+  {
+    route: "About",
+    pathname: "/about",
+  },
+  {
+    route: "Contact",
+    pathname: "/contact",
+  },
+];
 
 function Navbar() {
-  
-  
-
   return (
     <>
-        <Header/>
-
-        <AppBar position="static" className="bg-black" >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <Header />
+      <AppBar position="static" sx={{ backgroundColor: 'gray' }}>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
             <Image width={100} height={100} src={logo} alt="logo" />
-
-          
-          <Box className="w-full text-center" >
-          {navItems.map((item) => (
-                <Link key={item} href={item.pathname}>
+            <Box className="w-full text-center">
+              {navItems.map((item, index) => (
+                <Link key={index} href={item.pathname}>
                   <Button className="text-white">{item.route}</Button>
                 </Link>
-            ))}
-          </Box>
-
-
-          <Box>
+              ))}
+            </Box>
+            <Box>
               <Stack
                 direction="row"
                 sx={{
@@ -82,22 +71,21 @@ function Navbar() {
                   <FacebookIcon />
                 </IconButton>
                 <IconButton>
-                  <LinkedInIcon/>
+                  <LinkedInIcon />
                 </IconButton>
                 <IconButton>
-                  <WhatsAppIcon/>
+                  <WhatsAppIcon />
                 </IconButton>
                 <IconButton>
-                  <TwitterIcon/>
+                  <TwitterIcon />
                 </IconButton>
               </Stack>
             </Box>
-
-          
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </Toolbar>
+        </Container>
+      </AppBar>
     </>
   );
 }
+
 export default Navbar;
